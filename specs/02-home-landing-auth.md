@@ -1,6 +1,6 @@
 # SPEC 02 — Home (landing) + Auth
 
-> **Status:** Approved
+> **Status:** Implemented
 > **Depends on:** SPEC 01 (MVP cosmético)
 > **Date:** 2026-07-21
 > **Objective:** Portar la Home landing de `references/templates/homeabout/home.jsx` como nueva portada ("/") de Arcade Vault, moviendo la biblioteca a "/biblioteca" y creando la ruta "/auth" (portada de `auth.jsx`) para que los CTAs de Home tengan destino real, sin implementar la página "Acerca de".
@@ -56,19 +56,19 @@ type AuthTab = "in" | "up";
 
 ## Acceptance criteria
 
-- [ ] `npm run dev` levanta sin errores; `npm run build` compila sin errores de tipo/lint.
-- [ ] `/` muestra la Home: hero con silhouettes, sección "por qué Arcade Vault" (4 features), preview de 6 juegos, stats, actividad en vivo, precios, CTA final.
-- [ ] `/biblioteca` muestra exactamente lo que antes mostraba `/` (hero, search inerte, chips inertes, grid de 8 cards).
-- [ ] Botón "EXPLORAR JUEGOS" y CTA final de Home navegan a `/biblioteca`.
-- [ ] Botones "CREAR CUENTA" (hero) y "EMPEZAR GRATIS" (precios) navegan a `/auth`.
-- [ ] Stats de Home muestran `8+` (derivado de `GAMES.length`), no un número hardcodeado.
-- [ ] Sección actividad en vivo usa filas generadas por `seededScores()`, no hardcodeadas.
-- [ ] `/auth` muestra tabs Iniciar Sesión/Crear Cuenta funcionales (cambian el formulario visible); enviar el formulario navega a `/biblioteca`; "JUGAR COMO INVITADO" navega a `/biblioteca`.
-- [ ] Botones sociales (Google/GitHub) en `/auth` presentes pero sin acción.
-- [ ] Nav en todas las páginas: Inicio, Biblioteca, Salón de la Fama, Acerca de (sin link, visualmente apagado), botón "Iniciar Sesión" → `/auth`; estado activo correcto en cada ruta.
-- [ ] Ningún `Link`/`href` interno del proyecto apunta a `/` esperando la biblioteca (todos actualizados a `/biblioteca`).
-- [ ] No existe ruta `/about` ni `/acerca-de`.
-- [ ] Hamburguesa móvil abre/cierra panel con los mismos links que el nav de escritorio.
+- [x] `npm run dev` levanta sin errores; `npm run build` compila sin errores de tipo/lint.
+- [x] `/` muestra la Home: hero con silhouettes, sección "por qué Arcade Vault" (4 features), preview de 6 juegos, stats, actividad en vivo, precios, CTA final.
+- [x] `/biblioteca` muestra exactamente lo que antes mostraba `/` (hero, search inerte, chips inertes, grid de 8 cards).
+- [x] Botón "EXPLORAR JUEGOS" y CTA final de Home navegan a `/biblioteca`.
+- [x] Botones "CREAR CUENTA" (hero) y "EMPEZAR GRATIS" (precios) navegan a `/auth`.
+- [x] Stats de Home muestran `8+` (derivado de `GAMES.length`), no un número hardcodeado.
+- [x] Sección actividad en vivo usa filas generadas por `seededScores()`, no hardcodeadas.
+- [x] `/auth` muestra tabs Iniciar Sesión/Crear Cuenta funcionales (cambian el formulario visible); enviar el formulario navega a `/biblioteca`; "JUGAR COMO INVITADO" navega a `/biblioteca`.
+- [x] Botones sociales (Google/GitHub) en `/auth` presentes pero sin acción.
+- [x] Nav en todas las páginas: Inicio, Biblioteca, Salón de la Fama, Acerca de (sin link, visualmente apagado), botón "Iniciar Sesión" → `/auth`; estado activo correcto en cada ruta.
+- [x] Ningún `Link`/`href` interno del proyecto apunta a `/` esperando la biblioteca (todos actualizados a `/biblioteca`).
+- [x] No existe ruta `/about` ni `/acerca-de`.
+- [x] Hamburguesa móvil abre/cierra panel con los mismos links que el nav de escritorio.
 
 ---
 
