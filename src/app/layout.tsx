@@ -1,20 +1,23 @@
 import type { Metadata } from "next";
-import { Monoton, Space_Grotesk, JetBrains_Mono } from "next/font/google";
+import { Press_Start_2P, Courier_Prime, JetBrains_Mono } from "next/font/google";
+import { Nav } from "@/components/nav";
 import "./globals.css";
 
-const marquee = Monoton({
-  variable: "--font-marquee",
+const pressStart2P = Press_Start_2P({
+  variable: "--font-pixel",
   weight: "400",
   subsets: ["latin"],
 });
 
-const grotesk = Space_Grotesk({
-  variable: "--font-grotesk",
+const courierPrime = Courier_Prime({
+  variable: "--font-courier",
+  weight: ["400", "700"],
   subsets: ["latin"],
 });
 
 const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-hud",
+  variable: "--font-jetbrains",
+  weight: ["400", "500", "700"],
   subsets: ["latin"],
 });
 
@@ -31,9 +34,27 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${marquee.variable} ${grotesk.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      className={`${pressStart2P.variable} ${courierPrime.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <div className="av-bg"></div>
+        <div className="av-noise"></div>
+        <Nav />
+        <main className="av-main">{children}</main>
+        <footer
+          style={{
+            borderTop: "1px solid var(--line)",
+            padding: "20px 32px",
+            textAlign: "center",
+            color: "var(--ink-faint)",
+            fontFamily: "var(--mono)",
+            fontSize: 11,
+            letterSpacing: "0.16em",
+          }}
+        >
+          © 2026 ARCADE VAULT · HECHO CON PIXELES Y NEÓN · v2.6.0
+        </footer>
+      </body>
     </html>
   );
 }
