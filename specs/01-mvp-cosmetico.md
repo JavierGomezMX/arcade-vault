@@ -1,6 +1,6 @@
 # SPEC 01 — MVP cosmético de Arcade Vault
 
-> **Status:** Approved
+> **Status:** Implemented
 > **Depends on:** Ninguna (primer spec del proyecto)
 > **Date:** 2026-07-21
 > **Objective:** Construir el MVP visual de Arcade Vault en Next.js 16 (App Router) portando fielmente el diseño de los 5 templates estáticos en `references/templates/` (biblioteca, detalle, reproductor, salón de la fama, nav) como páginas reales, sin lógica de negocio ni persistencia.
