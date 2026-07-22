@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Press_Start_2P, Courier_Prime, JetBrains_Mono } from "next/font/google";
+import { Nav } from "@/components/nav";
 import "./globals.css";
 
 const pressStart2P = Press_Start_2P({
@@ -35,7 +36,12 @@ export default function RootLayout({
       lang="es"
       className={`${pressStart2P.variable} ${courierPrime.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <div className="av-bg"></div>
+        <div className="av-noise"></div>
+        <Nav />
+        <main className="av-main">{children}</main>
+      </body>
     </html>
   );
 }
