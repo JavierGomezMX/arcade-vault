@@ -15,4 +15,14 @@ https://github.com/Klerith/fernando-skills
 npx skills@latest add Klerith/fernando-skills
 ```
 
-## Hola Mundo 2
+
+## Commands
+
+```bash
+npm run dev     # start dev server (Next.js, Turbopack default)
+npm run build   # production build
+npm run start   # run production build
+npm run lint    # ESLint (flat config, eslint-config-next core-web-vitals + typescript)
+```
+
+No test runner is configured yet.
