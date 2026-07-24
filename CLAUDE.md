@@ -29,3 +29,5 @@ Per `README.md`, this project follows spec-driven design using `/spec` and `/spe
 ```bash
 npx skills@latest add Klerith/fernando-skills
 ```
+# Choosing the correct model for coding
+For pure implementation work (writing/editing code) where the change is alread fully specified - no more investigation, debugging, or back-and-foth needed - spawn a subagent running Sonnet 5 (model: sonnet) to do the coding
